@@ -1,4 +1,4 @@
-export type View = 'command' | 'network' | 'explain' | 'mirror' | 'stability' | 'compare' | 'report' | 'explorer'
+export type View = 'command' | 'network' | 'explain' | 'mirror' | 'stability' | 'compare' | 'simulator' | 'report' | 'explorer'
 export type FeatureId = 'concentration' | 'passThrough' | 'velocity' | 'counterparty' | 'dormant'
 
 export type Account = {
