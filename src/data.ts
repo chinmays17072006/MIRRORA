@@ -1,4 +1,4 @@
-export type View = 'command' | 'network' | 'explain' | 'mirror' | 'stability' | 'report' | 'explorer'
+export type View = 'command' | 'network' | 'explain' | 'mirror' | 'stability' | 'compare' | 'report' | 'explorer'
 export type FeatureId = 'concentration' | 'passThrough' | 'velocity' | 'counterparty' | 'dormant'
 
 export type Account = {
@@ -36,6 +36,27 @@ export const showcaseAccount = {
   velocity: '+840%',
   dormancy: '17 days',
 }
+
+export const normalAccount = {
+  id: 'ACC-6120',
+  risk: 18,
+  level: 'LOW',
+  connections: 3,
+  incoming: 6,
+  outgoing: 8,
+  passThrough: 18,
+  holding: '3.8 days',
+  velocity: '+12%',
+  dormancy: 'None observed',
+}
+
+export const comparisonMetrics = [
+  { label: 'Risk score', suspicious: 91, normal: 18, unit: '/100', tone: 'risk' },
+  { label: 'Pass-through ratio', suspicious: 92, normal: 18, unit: '%', tone: 'mint' },
+  { label: 'Average holding time', suspicious: 4.2, normal: 91.2, unit: 'min', tone: 'amber' },
+  { label: 'Velocity change', suspicious: 840, normal: 12, unit: '%', tone: 'coral' },
+  { label: 'Network connections', suspicious: 14, normal: 3, unit: 'accounts', tone: 'lavender' },
+]
 
 export const accounts: Account[] = [
   { id: 'ACC-2281', label: '2281', type: 'PERSONAL', risk: 43, x: 96, y: 72, connections: 4 },
